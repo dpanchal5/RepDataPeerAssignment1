@@ -9,7 +9,7 @@ output: html_document
 ##Loading and preprocessing the data
 
 Set the working directory
-```{r}
+```{r, echo=TRUE}
 setwd("D:/DivyaDataScience/ReproducibleResearch/Project/repdata_data_activity")
 ```
 Read the file
