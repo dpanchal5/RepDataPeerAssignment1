@@ -33,7 +33,7 @@ head(total)
 Plotting histogram
 
 hist(total$steps, main = "Total steps per day", xlab = "Steps", col ="blue")
-
+plot1.png
 
 Calculating the mean and median of the total number of steps taken per day
 
@@ -57,7 +57,7 @@ head(timeseries)
 Plotting
 
 plot(timeseries$Interval, timeseries$Mean, type = "l", xlab = "5-min Interval", ylab = "Average for all days", main = "Time Series Plot", col="red")
-
+plot2.png
 
 maxposition<-which.max(timeseries$Mean)
 maxpositionrow<-timeseries[maxposition,]
@@ -83,7 +83,7 @@ head(copyactivitydata)
 ## 6    50 2012-10-01       25
 newtotal<-aggregate(steps ~ copyactivitydata$date, data=copyactivitydata, FUN = sum)
 hist(newtotal$steps, main = "Total steps per day with NA replaced with 50", xlab = "Steps", col ="blue")
-
+plot3.png
 
 newmeanvalue<-mean(newtotal$steps)
 newmeanvalue
@@ -113,3 +113,4 @@ names(stepsByDay) <- c("interval", "daylevel", "steps")
 library(lattice)
 xyplot(steps ~ interval | daylevel, stepsByDay, type = "l", layout = c(1, 2), 
        xlab = "Interval", ylab = "Number of steps")
+plot4.png
