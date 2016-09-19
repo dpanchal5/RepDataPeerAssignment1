@@ -33,7 +33,7 @@ head(total)
 Plotting histogram
 
 hist(total$steps, main = "Total steps per day", xlab = "Steps", col ="blue")
-plot1.png
+![Plot1]/plot1.png
 
 Calculating the mean and median of the total number of steps taken per day
 
