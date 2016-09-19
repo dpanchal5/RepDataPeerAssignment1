@@ -1,4 +1,3 @@
-# RepDataPeerAssignment1
 Reproducible Research–Project1
 Divya Panchal
 
@@ -114,4 +113,3 @@ names(stepsByDay) <- c("interval", "daylevel", "steps")
 library(lattice)
 xyplot(steps ~ interval | daylevel, stepsByDay, type = "l", layout = c(1, 2), 
        xlab = "Interval", ylab = "Number of steps")
-
