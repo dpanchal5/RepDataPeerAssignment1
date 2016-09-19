@@ -27,7 +27,7 @@ head(total)
 ```
 
 Plotting histogram
-```{r}
+```{r, fig.height=4}
 hist(total$steps, main = "Total steps per day", xlab = "Steps", col ="blue")
 ```
 
@@ -46,7 +46,7 @@ names(timeseries)<-c("Interval", "Mean")
 head(timeseries)
 ```
 Plotting
-```{r}
+```{r, fig.height=4}
 plot(timeseries$Interval, timeseries$Mean, type = "l", xlab = "5-min Interval", ylab = "Average for all days", main = "Time Series Plot", col="red")
 maxposition<-which.max(timeseries$Mean)
 maxpositionrow<-timeseries[maxposition,]
@@ -66,6 +66,8 @@ copyactivitydata[is.na(copyactivitydata)]<-50
 head(copyactivitydata)
 
 newtotal<-aggregate(steps ~ copyactivitydata$date, data=copyactivitydata, FUN = sum)
+```
+```{r, fig.height=4}
 hist(newtotal$steps, main = "Total steps per day with NA replaced with 50", xlab = "Steps", col ="blue")
 newmeanvalue<-mean(newtotal$steps)
 newmeanvalue
